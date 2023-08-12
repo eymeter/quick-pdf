@@ -6,7 +6,7 @@ pdf = "https://dev-eym.me/summarize.pdf"
 started = True
 
 def chat():
-  headers = {"x-api-key": api_key}
+  headers = {"x-api-key": key}
   response = requests.post(f"{site}/sources/add-url",
                                    headers=headers,
                                    json={"url": pdf})
@@ -27,7 +27,14 @@ def chat():
                                   })
     chat_data = chat_response.json()
     print(f"- {chat_data}")
-    
+
+def main():
+  chat()
+
+
+if __name__ == "__main__":
+  main()
+
  
   
 
