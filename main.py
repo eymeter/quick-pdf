@@ -26,7 +26,7 @@ def chat():
                                     }]
                                   })
     chat_data = chat_response.json()
-    print(f"- {chat_data}")
+    print(f"- {chat_data['content']}")
 
 def main():
   chat()
@@ -34,6 +34,3 @@ def main():
 
 if __name__ == "__main__":
   main()
-
- 
-  
