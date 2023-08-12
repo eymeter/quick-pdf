@@ -15,7 +15,7 @@ def chat():
 
   while started:
     user = input("+ ")
-    chat_response = requests.post(f"{base_url}/chats/message",
+    chat_response = requests.post(f"{site}/chats/message",
                                   headers=headers,
                                   json={
                                     "sourceId":
@@ -37,6 +37,3 @@ if __name__ == "__main__":
 
  
   
-
-
-
